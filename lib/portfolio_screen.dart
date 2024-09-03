@@ -9,6 +9,9 @@ class PortfolioScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue,
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+      ),
       body: SafeArea(
         child: Column(
           children: [
