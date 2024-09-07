@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/portfolio2_screen.dart';
 import 'package:portfolio/portfolio_screen.dart';
 import 'package:portfolio/sign_up_screen.dart';
 
@@ -48,7 +49,7 @@ class LoginScreen extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => PortfolioScreen()));
+                              builder: (context) => Portfolio2Screen()));
                     },
                     child: Text(
                       "Login",

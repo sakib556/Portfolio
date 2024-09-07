@@ -20,3 +20,4 @@ flutter:
   assets:
     - assets/men.jpg
     - assets/login_icon.png
+    - assets/person.png
