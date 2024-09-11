@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/big_white_card.dart';
 import 'package:portfolio/details_section.dart';
 import 'package:portfolio/portfolio_app_bar.dart';
 import 'package:portfolio/white_box.dart';
@@ -44,31 +45,64 @@ class Portfolio2Screen extends StatelessWidget {
                         scrollDirection: Axis.horizontal,
                         child: Row(
                           children: [
-                            WhiteCard(),
+                            WhiteCard(
+                              title: "Facebook",
+                              icon: Icons.facebook,
+                            ),
                             SizedBox(
                               width: 20,
                             ),
-                            WhiteCard(),
+                            WhiteCard(
+                                title: "Linked In",
+                                icon: Icons.link_off_outlined),
                             SizedBox(
                               width: 20,
                             ),
-                            WhiteCard(),
+                            WhiteCard(
+                                title: "Github", icon: Icons.g_mobiledata),
                             SizedBox(
                               width: 20,
                             ),
-                            WhiteCard(),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            WhiteCard(),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            WhiteCard(),
                           ],
                         ),
                       ),
                     ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 20, right: 20),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Flutter Developer",
+                    style: TextStyle(color: Colors.orange, fontSize: 22),
+                  ),
+                  Text("6 Months Experience"),
+                  Text(
+                    "I have learned much knowledge on flutter for 1 years.\nI have some professional projects.I have some professional projects.",
+                    style: TextStyle(color: Colors.grey),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  BigWhiteCard(
+                    title: "App Design",
+                    icon: Icons.mobile_friendly,
+                    subTitle: "App design is my faboufajrej ",
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  BigWhiteCard(
+                    title: "App Design",
+                    icon: Icons.mobile_friendly,
+                    subTitle: "App design is my faboufajrej ",
                   ),
                 ],
               ),
@@ -81,8 +115,9 @@ class Portfolio2Screen extends StatelessWidget {
 }
 
 class WhiteCard extends StatelessWidget {
-  const WhiteCard({super.key});
-
+  const WhiteCard({super.key, required this.title, required this.icon});
+  final String title;
+  final IconData icon;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -96,11 +131,11 @@ class WhiteCard extends StatelessWidget {
         children: [
           Row(
             children: [
-              Icon(Icons.facebook),
+              Icon(icon),
               SizedBox(
                 width: 6,
               ),
-              Text("Facebook")
+              Text(title)
             ],
           ),
           Text("Follow me")

@@ -26,6 +26,9 @@ class SignUpScreen extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),
             ),
+            SizedBox(
+              height: 30,
+            ),
             Padding(
               padding: const EdgeInsets.only(right: 10, left: 10),
               child: Column(
@@ -58,6 +61,11 @@ class SignUpScreen extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: Text("Sign Up"))
                 ],
               ),
             ),
